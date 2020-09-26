@@ -1,0 +1,99 @@
+// --- fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+// === / fonts
+// --- mixins
+// === / mixins
+// --- variables
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1199px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+// === / variables
+// --- commons
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 166.69%;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .container {
+        max-width: 1290px;
+    }
+}
+
+section {}
+
+// === / commons
+// --- header
+.header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding-top: 6px;
+    .logo {
+        background: url(../img/bg-logo.png) no-repeat 50% 50%;
+        background-size: contain;
+        width: 121px;
+        height: 121px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: #FCF3E4;
+    }
+    .menu {
+        .menu_item a {
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #FCF3E4;
+        }
+    }
+} // === / header
+// --- intro
+.section_intro {
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: .5);
+        z-index: 1;
+    }
+}
+
+// === / intro
+// --- promo
+// === / promo
+// --- about
+// === / about
+// --- feedback
+// === / feedback
+// --- contacts
+// === / contacts
