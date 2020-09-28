@@ -26,6 +26,7 @@ $screen_xl: 1200px;
     font-size: 18px;
     line-height: 166.69%;
     color: #FFFEFE;
+    background-color: rgba(23, 4, 34, 1);
     a,
     a:hover {
         text-decoration: none;
@@ -38,19 +39,22 @@ $screen_xl: 1200px;
     .container {
         max-width: 1290px;
     }
-    .main_btn {
+    .brand-btn {
         display: inline-block;
         font-family: 'Roboto';
         text-align: center;
         font-size: 20px;
         line-height: 23px;
         color: #FFFFFF;
-        background: linear-gradient(90deg, rgba(66, 26, 136, 1), rgba(126, 27, 117, 1));
-        padding: 14px 0;
         width: 221px;
+        cursor: pointer;
         transition: .3s;
-        &:hover {
-            filter: drop-shadow(4px 4px 20px rgba(255, 254, 254, 0.2));
+        &__main {
+            background: linear-gradient(90deg, rgba(66, 26, 136, 1), rgba(126, 27, 117, 1));
+            padding: 14px 0;
+            &:hover {
+                filter: drop-shadow(4px 4px 20px rgba(255, 254, 254, 0.2));
+            }
         }
         &__second {
             background: none;
@@ -58,6 +62,9 @@ $screen_xl: 1200px;
             border-image-source: linear-gradient(90deg, rgba(66, 26, 136, 1), rgba(126, 27, 117, 1));
             border-image-slice: 1;
             padding: 13px 0;
+            &:hover {
+                background: linear-gradient(90deg, rgba(66, 26, 136, 1), rgba(126, 27, 117, 1));
+            }
         }
     }
     .section_title {
@@ -69,10 +76,6 @@ $screen_xl: 1200px;
         color: #FFFEFE;
         margin-bottom: 150px;
     }
-}
-
-.section_group {
-    background: linear-gradient(132.9deg, #0b0213 0%, #1c041a 97.04%);
 }
 
 section {
@@ -116,16 +119,24 @@ section {
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background-color: #0b0213;
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #000000, $alpha: .5);
-        z-index: 1;
+    .video {
+        position: relative;
+        display: flex;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(23, 4, 34, .7);
+            z-index: 1;
+        }
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
     .intro_text_wrap {
         position: absolute;
@@ -199,6 +210,19 @@ section {
 // === / promo
 // --- services
 .section_services {
+    .section_title {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-left: -110px;
+            display: block;
+            background-color: #CA9883;
+            width: 90px;
+            height: 3px;
+        }
+    }
     .service_card {
         margin-top: 100px;
         &__title {
@@ -238,6 +262,19 @@ section {
 // === / services
 // --- steps
 .section_steps {
+    .section_title {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-left: -110px;
+            display: block;
+            background-color: #CA9883;
+            width: 90px;
+            height: 3px;
+        }
+    }
     .steps_item {
         display: flex;
         flex-direction: column;
@@ -274,17 +311,26 @@ section {
     padding: 0;
     position: relative;
     overflow: hidden;
-    height: 880px;
     background-color: #0f000c;
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba($color: #000000, $alpha: .5);
-        z-index: 1;
+    .video {
+        position: relative;
+        display: flex;
+        height: 970px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(23, 4, 34, .7);
+            z-index: 1;
+        }
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
     }
     .about_text_wrap {
         padding-top: 100px;
@@ -296,17 +342,50 @@ section {
         height: 100%;
         z-index: 2;
         line-height: 166.69%;
-        .about_item {
-            margin-top: 75px;
-            &__title {
-                font-weight: 600;
-                font-size: 48px;
-                line-height: 58px;
-                text-transform: uppercase;
-                color: #FFFEFE;
+        .slider {
+            .about_item {
+                max-width: 376px;
+                height: 460px;
+                padding: 0 72px;
+                margin: 20px 10px;
+                outline: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: rgba(74, 20, 75, 0.2);
+                border-radius: 5px;
+                transition: .3s;
+                cursor: pointer;
+                &:hover {
+                    background: #25042E;
+                }
+                &__title {
+                    font-weight: 600;
+                    font-size: 70px;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    color: #FFFEFE;
+                    transition: .3s;
+                    span {
+                        font-size: 48px;
+                    }
+                }
+                &__description {
+                    text-align: center;
+                    margin-top: 30px;
+                    font-weight: normal;
+                    font-size: 20px;
+                    line-height: 1.3;
+                }
             }
-            &__description {
-                margin-top: 25px;
+            .slick-current {
+                background: #25042E;
+                height: 500px;
+                margin: 0 10px;
+                .about_item__title {
+                    font-size: 96px;
+                }
             }
         }
     }
@@ -315,7 +394,6 @@ section {
 // === / about
 // --- feedback
 .section_feedback {
-    background-color: #0f000c;
     .form {
         input,
         textarea {
@@ -347,12 +425,16 @@ section {
 // === / feedback
 // --- contacts
 .section_footer {
-    background: #0f000c url(../img/footer.png) no-repeat 0 0;
-    background-size: 100% 100%;
+    background: linear-gradient(176.99deg, rgba(23, 4, 34, 0.2) -0.27%, rgba(70, 11, 112, 0.122) 94.77%);
     padding-bottom: 0;
-    .contacts_icon {
-        width: 30px;
-        margin-right: 20px;
+    .contacts_box {
+        a+a {
+            margin-left: 50px;
+        }
+        img {
+            width: 30px;
+            margin-right: 25px;
+        }
     }
     .footer_text {
         text-align: center;
@@ -364,7 +446,8 @@ section {
         /* identical to box height */
         text-transform: uppercase;
         padding: 50px 0;
-        border-top: 1px solid #CA9883;
+        border-top: 1px solid rgba(202, 152, 131, 0.4);
+        ;
     }
 }
 
