@@ -7,6 +7,9 @@
     <meta name="description" content="description description description description description description">
 
     <title>FELETON</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" />
+
+
 
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- bootstrap CSS only -->
@@ -16,6 +19,8 @@
 </head>
 
 <body class="body">
+    <div class="cursor">
+    </div>
 
     <!-- header -->
     <header id="header" class="header">
@@ -26,9 +31,9 @@
                 </div>
                 <div class="col-4">
                     <ul class="menu d-flex justify-content-between">
-                        <li class="menu_item"><a href="#" class="nav_link">Услуги</a></li>
-                        <li class="menu_item"><a href="#" class="nav_link">Консультация</a></li>
-                        <li class="menu_item"><a href="#" class="nav_link">Контакты</a></li>
+                        <li class="menu_item"><a href="#services" class="nav_link">Услуги</a></li>
+                        <li class="menu_item"><a href="#feedback" class="nav_link">Консультация</a></li>
+                        <li class="menu_item"><a href="#contacts" class="nav_link">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="col-2">
@@ -136,7 +141,7 @@
                             </ul>
                         </div>
                         <div class="service_card__button">
-                            <a class="brand-btn brand-btn__second">
+                            <a class="brand-btn brand-btn__second" href="/pages/smm.html">
                                     Узнать цену
                                 </a>
                         </div>
@@ -398,6 +403,7 @@
     <!-- slick slider -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
+    <script src="js/cursor.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/script.js"></script>
 </body>

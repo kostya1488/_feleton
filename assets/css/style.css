@@ -2,7 +2,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  cursor: url("../img/cursor.cur"), default; }
+
+.cursor {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 100ms;
+  animation: cursorAnim 1.3s infinite alternate;
+  pointer-events: none;
+  z-index: 1000; }
+
+.cursor::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 1px solid #5f1374;
+  border-radius: 50%;
+  opacity: .8;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  animation: cursorAnim 1.3s infinite alternate; }
+
+.cursor::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 8px solid #CA9883;
+  border-radius: 50%;
+  opacity: .5;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+  animation: cursorAnim2 1s infinite alternate; }
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+  border: 1px solid #7e1b75; }
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.5); } }
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0.5); } }
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(3); }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
 
 .body {
   font-family: 'Inter', sans-serif;
@@ -28,7 +93,6 @@
     line-height: 23px;
     color: #FFFFFF;
     width: 221px;
-    cursor: pointer;
     transition: .3s; }
     .body .brand-btn__main {
       background: linear-gradient(90deg, #421a88, #7e1b75);
@@ -58,7 +122,7 @@ section {
 
 .header {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   padding-top: 6px; }
   .header .logo {
@@ -81,6 +145,8 @@ section {
       font-weight: normal;
       text-transform: uppercase;
       color: #FCF3E4; }
+      .header .menu .menu_item a:hover {
+        color: #CA9883; }
 
 .section_intro {
   padding: 0;
@@ -230,7 +296,7 @@ section {
     line-height: 24px;
     /* identical to box height */
     text-transform: uppercase;
-    color: #BF907C; }
+    color: #CA9883; }
   .section_steps .steps_item__description {
     text-align: center;
     color: #FFFFFF; }
@@ -279,8 +345,7 @@ section {
       align-items: center;
       background: rgba(74, 20, 75, 0.2);
       border-radius: 5px;
-      transition: .3s;
-      cursor: pointer; }
+      transition: .3s; }
       .section_about .about_text_wrap .slider .about_item:hover {
         background: #25042E; }
       .section_about .about_text_wrap .slider .about_item__title {
@@ -325,6 +390,7 @@ section {
   border-bottom: 2px solid rgba(106, 73, 153, 0.4); }
 
 .section_feedback .form button {
+  cursor: url("../img/cursor.cur"), default;
   outline: none;
   border: none;
   margin-top: 114px; }
