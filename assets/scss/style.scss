@@ -166,6 +166,8 @@ section {
 // --- header
 .header {
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 3;
     width: 100%;
     padding-top: 6px;
@@ -342,6 +344,92 @@ section {
 }
 
 // === / services
+// --- section_services_item
+.section_services_item {
+    margin-top: 127px;
+    overflow: hidden;
+    .back_arrow {
+        font-size: 20px;
+        transition: .3s;
+        &:hover {
+            color: #CA9883;
+        }
+    }
+    .services_title {
+        font-family: 'Roboto';
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 70px;
+        text-transform: uppercase;
+        color: #CA9883;
+        position: relative;
+        margin-left: 110px;
+        margin-bottom: 100px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-left: -110px;
+            display: block;
+            background-color: #CA9883;
+            width: 90px;
+            height: 3px;
+        }
+    }
+    .services_item {
+        padding: 45px 30px;
+        border: 1px solid #CA9883;
+        height: 100%;
+        ol {
+            padding-left: 28px;
+        }
+        .services_item__title {
+            font-family: 'Open Sans';
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 49px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                // top: 50%;
+                // margin-left: -110px;
+                bottom: 0;
+                display: block;
+                background-color: #CA9883;
+                width: 90px;
+                height: 3px;
+            }
+        }
+        .services_item__subtitle {
+            font-family: 'Roboto';
+            text-align: center;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 42px;
+            text-transform: uppercase;
+            color: #FFFEFE;
+            margin-bottom: 30px;
+        }
+        .services_item__list {
+            ul {
+                list-style: none;
+            }
+            li+li {
+                margin-top: 5px;
+            }
+            li span {
+                color: #CA9883;
+            }
+        }
+    }
+}
+
+// === / section_services_item
 // --- steps
 .section_steps {
     .section_title {
