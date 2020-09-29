@@ -19,24 +19,35 @@
 </head>
 
 <body class="body">
-    <div class="cursor">
+    <div class="cursor d-none d-xl-block">
     </div>
     <!-- header -->
     <header id="header" class="header">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-2">
-                    <div class="logo">feleton</div>
+                <div class="col-6 col-sm-3 order-1 order-sm-0">
+                    <a href="index.html#intro">
+                        <div class="logo">feleton</div>
+                    </a>
                 </div>
-                <div class="col-4">
-                    <ul class="menu d-flex justify-content-between">
-                        <li class="menu_item"><a href="#services" class="nav_link">Услуги</a></li>
+                <div class="col-3 col-sm-5 col-xl-4">
+                    <div class="menu_button">
+                        <div class="button_item button_item__top"></div>
+                        <div class="button_item button_item__mid"></div>
+                        <div class="button_item button_item__bot"></div>
+                    </div>
+                    <ul class="menu d-flex justify-content-sm-between">
+                        <li class="menu_item d-sm-none"><a href="pages/smm.html" class="">SMM</a></li>
+                        <li class="menu_item d-sm-none"><a href="pages/target.html" class="">TARGET</a></li>
+                        <li class="menu_item d-sm-none"><a href="pages/production.html" class="">PRODUCTION</a></li>
+                        <li class="menu_item d-sm-none"><a href="pages/web-site.html" class="">САЙТЫ</a></li>
+                        <li class="menu_item"><a href="#services" class="nav_link">Все услуги</a></li>
                         <li class="menu_item"><a href="#feedback" class="nav_link">Консультация</a></li>
                         <li class="menu_item"><a href="#contacts" class="nav_link">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="col-2">
-                    <div class="phone_number text-right"><a href="tel:+">(066) 454 12 14</a></div>
+                <div class="col-3 phone_number text-right order-2">
+                    <a href="tel:+" class="phone_number__link"><img src="assets/img/svg/phone_white.svg" class="d-sm-none " alt="">(066) 454 12 14</a>
                 </div>
             </div>
         </div>
@@ -45,7 +56,7 @@
 
     <!-- intro -->
     <section id="intro" class="section_intro">
-        <div class="video">
+        <div class="video d-none d-xl-block">
             <video poster="assets/img/intro-poster.jpg" autoplay loop muted="muted">
                 <source src="assets/video/intro.mp4" type="video/mp4">        
             </video>
@@ -53,18 +64,18 @@
         <div class="intro_text_wrap">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-11 d-flex flex-column align-items-center">
+                    <div class="col-sm-11 d-flex flex-column align-items-center">
                         <div class="intro_title">
                             Feleton
                         </div>
                         <div class="intro_subtitle">
                             SMM AGENCY
                         </div>
-                        <div class="col-7 intro_description">
+                        <div class="p-0  col-sm-7 intro_description">
                             Увеличиваем продажи с помощью правильной рекламы и сочной упаковки вашего бизнеса в социальных сетях
                         </div>
                         <div class="intro_button">
-                            <a href="#" id="test" class="brand-btn brand-btn__main">Узнать цену</a>
+                            <a href="#services" id="test" class="brand-btn brand-btn__main nav_link">Узнать цену</a>
                         </div>
                     </div>
                 </div>
@@ -76,14 +87,14 @@
     <section id="promo" class="section_promo">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-8">
+                <div class="col-sm-8">
                     <div class="promo_text">
                         Гарантированное увеличение количества клиентов и их лояльности за счет услуг комплексного продвижения в социальных сетях. Попадаем в самое сердце вашей целевой аудитории.
                     </div>
                 </div>
             </div>
-            <div class="row promo_cards_area">
-                <div class="col-4">
+            <div class="row flex-column flex-sm-row promo_cards_area">
+                <div class="col-sm-4">
                     <div class="promo_card">
                         <div class="promo_card__icon">
                             <img src="assets/img/svg/instagram.svg" alt="inst">
@@ -93,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4">
                     <div class="promo_card">
                         <div class="promo_card__icon">
                             <img src="assets/img/svg/facebook.svg" alt="fb">
@@ -103,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
+                <div class="col-sm-4">
                     <div class="promo_card">
                         <div class="promo_card__icon">
                             <img src="assets/img/svg/youtube.svg" alt="yt">
@@ -125,45 +136,49 @@
                     Услуги
                 </div>
             </div>
-            <div class="row justify-content-between">
-                <div class="col-5">
-                    <div class="service_card mt-0">
-                        <div class="service_card__title">
-                            SMM
-                        </div>
-                        <div class="service_card__description">
-                            <p>SMM - это наша слабость и мы обожаем то чувство, когда результаты работ превышают ожидания наших клиентов.</p>
-                            <ul>
-                                <li>Составим стратегию продвижения бизнеса, которая подходит именно вам и решит поставленные задачи.</li>
-                                <li>Поднимаем имидж вашей компании на качественно новый уровень.</li>
-                                <li>Наладим продажи товаров и услуг в актуальных для вас соц сетях</li>
-                            </ul>
+            <div class="row flex-column flex-sm-row justify-content-between">
+                <div class="col-sm-6 col-lg-5 service_card_wrap mt-0">
+                    <div class="service_card">
+                        <div class="service_card_content">
+                            <div class="service_card__title">
+                                SMM
+                            </div>
+                            <div class="service_card__description">
+                                <p>SMM - это наша слабость и мы обожаем то чувство, когда результаты работ превышают ожидания наших клиентов.</p>
+                                <ul>
+                                    <li>Составим стратегию продвижения бизнеса, которая подходит именно вам и решит поставленные задачи.</li>
+                                    <li>Поднимаем имидж вашей компании на качественно новый уровень.</li>
+                                    <li>Наладим продажи товаров и услуг в актуальных для вас соц сетях</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="service_card__button">
                             <a class="brand-btn brand-btn__second" href="/pages/smm.html">
-                                    Узнать цену
-                                </a>
+                                Узнать цену
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
-                    <div class="service_card mt-0">
-                        <div class="service_card__title">
-                            TARGET
-                        </div>
-                        <div class="service_card__description">
-                            <p>
-                                Сделаем все, чтобы ваша реклама попадала точно в цель!
-                            </p>
-                            <p>
-                                Разработаем и реализуем эффективную стратегию продвижения аккаунтов.
-                            </p>
-                            <p>
-                                Привлечем целевую аудиторию для вашего бренда. Не массовку, а людей, которые заинтересованы в продукте/услуге.
-                            </p>
-                            <p>
-                                Оптимизируем рекламный бюджет, никакого "сливания" денег без результата.
-                            </p>
+                <div class="col-sm-6 col-lg-5 service_card_wrap mt-sm-0">
+                    <div class="service_card">
+                        <div class="service_card_content">
+                            <div class="service_card__title">
+                                TARGET
+                            </div>
+                            <div class="service_card__description">
+                                <p>
+                                    Сделаем все, чтобы ваша реклама попадала точно в цель!
+                                </p>
+                                <p>
+                                    Разработаем и реализуем эффективную стратегию продвижения аккаунтов.
+                                </p>
+                                <p>
+                                    Привлечем целевую аудиторию для вашего бренда. Не массовку, а людей, которые заинтересованы в продукте/услуге.
+                                </p>
+                                <p>
+                                    Оптимизируем рекламный бюджет, никакого "сливания" денег без результата.
+                                </p>
+                            </div>
                         </div>
                         <div class="service_card__button">
                             <a class="brand-btn brand-btn__second" href="pages/target.html">
@@ -172,21 +187,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
+                <div class="col-sm-6 col-lg-5 service_card_wrap">
                     <div class="service_card">
-                        <div class="service_card__title">
-                            PRODUCTION
-                        </div>
-                        <div class="service_card__description">
-                            <p>
-                                Иногда дизайн решает все! 90% информации пользователь получает из визуального контента и мы сделаем все, чтобы он был запоминающимся:
-                            </p>
-                            <p>
-                                Мы предлагаем production полного цикла: создание эффектных фото, видео, сторис, которые представят ваш товар/услугу с лучшей стороны.
-                            </p>
-                            <p>
-                                Разработаем стратегию, которая максимально эффектно представит ваш бренд и будет "цеплять" аудиторию. Сделаем ваш аккаунт индивидуальным и с изюминкой!
-                            </p>
+                        <div class="service_card_content">
+                            <div class="service_card__title">
+                                PRODUCTION
+                            </div>
+                            <div class="service_card__description">
+                                <p>
+                                    Иногда дизайн решает все! 90% информации пользователь получает из визуального контента и мы сделаем все, чтобы он был запоминающимся:
+                                </p>
+                                <p>
+                                    Мы предлагаем production полного цикла: создание эффектных фото, видео, сторис, которые представят ваш товар/услугу с лучшей стороны.
+                                </p>
+                                <p>
+                                    Разработаем стратегию, которая максимально эффектно представит ваш бренд и будет "цеплять" аудиторию. Сделаем ваш аккаунт индивидуальным и с изюминкой!
+                                </p>
+                            </div>
                         </div>
                         <div class="service_card__button">
                             <a class="brand-btn brand-btn__second" href="pages/production.html">
@@ -195,26 +212,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
+                <div class="col-sm-6 col-lg-5 service_card_wrap">
                     <div class="service_card">
-                        <div class="service_card__title">
-                            САЙТЫ
-                        </div>
-                        <div class="service_card__description">
-                            <p>
-                                Нельзя недооценивать эффективность "правильной" подачи информации. Создаем сайты, которые приводят клиентов!
-                            </p>
-                            <p>
-                                Выполняем проекты любой сложности под ключ. Индивидуальный дизайн, контент, контекстная реклама для вашей целевой аудитории.
-                            </p>
-                            <p>
-                                Успешно объединяем современные технологии и маркетинг! Мы давно освоили искусство привлекать внимание с первого взгляда!
-                            </p>
+                        <div class="service_card_content">
+                            <div class="service_card__title">
+                                САЙТЫ
+                            </div>
+                            <div class="service_card__description">
+                                <p>
+                                    Нельзя недооценивать эффективность "правильной" подачи информации. Создаем сайты, которые приводят клиентов!
+                                </p>
+                                <p>
+                                    Выполняем проекты любой сложности под ключ. Индивидуальный дизайн, контент, контекстная реклама для вашей целевой аудитории.
+                                </p>
+                                <p>
+                                    Успешно объединяем современные технологии и маркетинг! Мы давно освоили искусство привлекать внимание с первого взгляда!
+                                </p>
+                            </div>
                         </div>
                         <div class="service_card__button">
                             <a class="brand-btn brand-btn__second" href="pages/web-site.html">
-                                    Узнать цену
-                                </a>
+                                Узнать цену
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -226,13 +245,15 @@
     <section id="steps" class="section_steps">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="section_title">
-                    smm продвижение
+                <div class="col">
+                    <div class="section_title">
+                        smm продвижение
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="steps_item">
+            <div class="row flex-column align-items-center flex-sm-row">
+                <div class="col-10 col-sm-3">
+                    <div class="steps_item mt-0">
                         <div class="steps_item__icon">
                             <img src="assets/img/svg/trophy.svg" alt="trophy">
                         </div>
@@ -244,7 +265,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-10 col-sm-3">
                     <div class="steps_item">
                         <div class="steps_item__icon">
                             <img src="assets/img/svg/client.svg" alt="clients">
@@ -257,7 +278,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-10 col-sm-3">
                     <div class="steps_item">
                         <div class="steps_item__icon">
                             <img src="assets/img/svg/megaphone.svg" alt="megaphone">
@@ -270,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-10 col-sm-3">
                     <div class="steps_item">
                         <div class="steps_item__icon">
                             <img src="assets/img/svg/money.svg" alt="money">
@@ -289,7 +310,7 @@
     <!-- / steps -->
     <!-- about -->
     <section id="about" class="section_about">
-        <div class="video">
+        <div class="video d-none d-xl-block">
             <video poster="assets/img/about-poster.jpg" autoplay loop muted="muted">
                 <source src="assets/video/about.mp4" type="video/mp4">        
             </video>
@@ -358,18 +379,21 @@
     <section id="feedback" class="section_feedback">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-sm-8 col-xl-6">
                     <div class="section_title text-center">
                         ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
                     </div>
                     <div class="feedback_form_wrap">
+                        <div class="response text-center">
+                            Заявка отправлена! <br> Наш менеджер свяжемся с вами в ближайшее время.
+                        </div>
                         <form action="" class="form">
                             <input type="text" class="input mt-0" placeholder="Имя">
                             <input type="tel" class="input" placeholder="Телефон">
                             <input type="email" class="input" placeholder="E-mail">
                             <textarea name="message" id="" rows="3" placeholder="Сообщение"></textarea>
                             <div class="form_button d-flex justify-content-center">
-                                <button class="brand-btn brand-btn__main">Отправить</button>
+                                <button class="form_button brand-btn brand-btn__main">Отправить</button>
                             </div>
                         </form>
                     </div>
@@ -386,7 +410,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="contacts_box">
-                    <a href="tel:+"><img src="assets/img/svg/phone.svg" alt="phone">099 666 14 88;</a>
+                    <a href="tel:+"><img src="assets/img/svg/phone.svg" alt="phone">099 666 14 88</a>
                     <a href="tel:+"><img src="assets/img/svg/phone.svg" alt="phone">099 666 14 88</a>
                     <a href="mailto:"><img src="assets/img/svg/mail.svg" alt="mail">mail@feleton.com</a>
                 </div>
@@ -405,6 +429,7 @@
     <script src="js/cursor.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/ajax.js"></script>
 </body>
 
 </html>
