@@ -5,7 +5,7 @@ $(document).ready(function() {
     //         return false;
     //     }
     // );
-    // $response_html = "Заявка отправлена! <br> Наш менеджер свяжемся с вами в ближайшее время."
+    $response_html = "Заявка отправлена! <br> Наш менеджер свяжемся с вами в ближайшее время."
 
     $('.form_button').click(function(e) {
         e.preventDefault();
@@ -15,7 +15,7 @@ $(document).ready(function() {
         setTimeout(
             () => {
                 $('.form').hide();
-
+                $('.response').html($response_html);
                 $('.response').css({ 'opacity': '1', 'visibility': 'visible' });
 
             }, 1000

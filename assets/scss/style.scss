@@ -67,6 +67,7 @@ $screen_xl: 1200px;
     box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
     // transition: .3s;
     &.expand {
+        background: #fff;
         transform: translate(-18px, -18px) scale(3);
     }
 }
@@ -456,9 +457,6 @@ section {
             font-weight: normal;
             /* or 32px */
         }
-        .intro_button {
-            margin-top: 50px;
-        }
     }
     @media (min-width: $screen_xl) {
         min-height: 100vh;
@@ -480,7 +478,7 @@ section {
                 /* or 32px */
             }
             .intro_button {
-                margin-top: 20px;
+                margin-top: 50px;
             }
         }
     }

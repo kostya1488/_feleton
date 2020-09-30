@@ -42,6 +42,7 @@
   border: 2px solid #fff;
   box-shadow: 0 0 22px rgba(255, 255, 255, 0.6); }
   .cursor2.expand {
+    background: #fff;
     transform: translate(-18px, -18px) scale(3); }
 
 .cursor2.hover {
@@ -286,8 +287,6 @@ section {
       margin-top: 25px;
       font-weight: normal;
       /* or 32px */ }
-    .section_intro .intro_text_wrap .intro_button {
-      margin-top: 50px; }
   @media (min-width: 1200px) {
     .section_intro {
       min-height: 100vh; }
@@ -305,7 +304,7 @@ section {
         line-height: 158.69%;
         /* or 32px */ }
       .section_intro .intro_text_wrap .intro_button {
-        margin-top: 20px; } }
+        margin-top: 50px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .section_intro {
       background: url(../img/intro-poster.jpg) no-repeat 12% 0;
