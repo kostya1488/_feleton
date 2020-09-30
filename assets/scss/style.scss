@@ -22,7 +22,7 @@ $screen_xl: 1200px;
 // --- commons
 * {
     box-sizing: border-box;
-    cursor: url('../img/test3.cur'), default;
+    cursor: url('../img/cursor.cur'), default;
 }
 
 .cursor,
@@ -65,6 +65,10 @@ $screen_xl: 1200px;
 .cursor2 {
     border: 2px solid #fff;
     box-shadow: 0 0 22px rgba(255, 255, 255, 0.6);
+    // transition: .3s;
+    &.expand {
+        transform: translate(-18px, -18px) scale(3);
+    }
 }
 
 .cursor2.hover {
@@ -129,7 +133,7 @@ $screen_xl: 1200px;
 //         transform: scale(1);
 //     }
 //     to {
-//         transform: scale(1.5);
+//         transform: scale(2);
 //     }
 // }
 // @keyframes cursorAnim2 {

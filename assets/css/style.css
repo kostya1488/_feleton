@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 * {
   box-sizing: border-box;
-  cursor: url("../img/test3.cur"), default; }
+  cursor: url("../img/cursor.cur"), default; }
 
 .cursor,
 .cursor2,
@@ -41,6 +41,8 @@
 .cursor2 {
   border: 2px solid #fff;
   box-shadow: 0 0 22px rgba(255, 255, 255, 0.6); }
+  .cursor2.expand {
+    transform: translate(-18px, -18px) scale(3); }
 
 .cursor2.hover {
   background: white;
