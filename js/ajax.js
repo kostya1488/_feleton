@@ -1,7 +1,13 @@
 $(document).ready(function() {
-    $("form").submit(
+    $("#form_main").submit(
         function() {
-            sendAjaxForm('../php/formhandler.php');
+            sendAjaxForm('form_main', '../php/formhandler_main.php');
+            return false;
+        }
+    );
+    $("#form_callback").submit(
+        function() {
+            sendAjaxForm('form_callback', '../php/formhandler_callback.php');
             return false;
         }
     );
@@ -24,12 +30,12 @@ function showResponseText(response_text) {
     )
 }
 
-function sendAjaxForm(url) {
+function sendAjaxForm(form_id, url) {
     $.ajax({
         url: url,
         type: "POST",
         dataType: "html",
-        data: $('form').serialize(),
+        data: $('#' + form_id).serialize(),
         success: function(response) {
             // result = $.parseJSON(response);
             showResponseText($response_true_html)
