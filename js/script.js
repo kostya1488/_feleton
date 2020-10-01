@@ -14,11 +14,11 @@ $(document).ready(function() {
         $('body').removeClass('disable_scroll');
     });
 
-    $(".menu_button").click(function(e) {
-        e.preventDefault();
-        $('header').toggleClass('menu_active');
-        $('body').toggleClass('disable_scroll');
-    });
+    // $(".menu_button").click(function(e) {
+    //     e.preventDefault();
+    //     $('header').toggleClass('menu_active');
+    //     $('body').toggleClass('disable_scroll');
+    // });
     //     // toggle bg color of menu items
     //     $('.menu_item').click(function(e) {
     //         e.preventDefault();
